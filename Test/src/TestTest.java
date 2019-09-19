@@ -19,11 +19,12 @@ class TestTest {
 
     @Test
     void createContainerShip(){
-        Freighter containerShip = new Freighter();
+        ContainerShip containerShip = new ContainerShip("Marco Polo", LocalDate.of(2012,Month.NOVEMBER,6),187625,16020, true, ENUMstatus.HOME);
         assertTrue(containerShip.getName() == "Marco Polo");
-        assertTrue(containerShip.getlaunchDate().isEqual(LocalDate.of(2012, Month.NOVEMBER, 6)));
-        assertTrue(containerShip.getDeadWeightTonnage == 187625);
-        assertTrue(containerShip.getCarryContainerCount == 16020);
+        assertTrue(containerShip.getLaunchDate().isEqual(LocalDate.of(2012, Month.NOVEMBER, 6)));
+        assertTrue(containerShip.getDeadWeightTonnage() == 187625);
+        assertTrue(containerShip.getContainerCount() == 16020);
+        assertTrue(containerShip.isEmpty());
+        assertTrue(containerShip.getStatus().toString() == ENUMstatus.HOME.toString());
     }
-
 }
