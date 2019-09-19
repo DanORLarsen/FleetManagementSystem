@@ -9,5 +9,7 @@ class TestTest {
     @Test
     void checkENUMStatus(){
         assertTrue(ENUMstatus.HOME.toString() == "Docked at home");
+        assertTrue(ENUMstatus.AWAY.toString() == "Docked away");
+        assertTrue(ENUMstatus.VOYAGE.toString() == "On voyage...");
     }
 }
